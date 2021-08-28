@@ -8,17 +8,20 @@ import styles from '../styles/components/Countdown.module.css'
 let countdownTimeout: NodeJS.Timeout
 
 export function Countdown() {
-    const {startNewChallenge } = useContext(ChallengesContext)
+    const {startNewChallenge, activeChallenge, level, hasActiveChallange} = useContext(ChallengesContext)
 
     const [time, setTime] = useState(0.1 * 60)
     const [isActive, setIsActive] = useState(false)
-    const [hasFinished, setHasFinished] = useState(false)
 
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
 
     const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
+    
+    useEffect(() => {
+        resetCountdown()
+    } ,[activeChallenge])
 
     function startCountdown() {
         setIsActive(true)
@@ -27,27 +30,23 @@ export function Countdown() {
     function resetCountdown() {
         clearTimeout(countdownTimeout)
         setIsActive(false)
-        setTime(25 * 60)
+        setTime(0.1 * 60)
     }
 
     useEffect(() => {
-
         if (isActive && time > 0) {
             countdownTimeout = setTimeout(() => {
                 setTime(time - 1)
             }, 1000);
         } else if (isActive && time === 0) {
-            setHasFinished(true)
             setIsActive(false)
             startNewChallenge()
         }
-
     }, [isActive, time])
 
     return (
         <div>
             <div className={styles.countdownContainer}>
-
                 <div>
                     <span>{minuteLeft}</span>
                     <span>{minuteRight}</span>
@@ -59,12 +58,10 @@ export function Countdown() {
                     <span>{secondLeft}</span>
                     <span>{secondRight}</span>
                 </div>
-
-
             </div>
 
             {
-                hasFinished ? (
+                (hasActiveChallange) ? (
                     <button
                         type='button'
                         disabled
