@@ -1,4 +1,4 @@
-import '../styles/global.css'
+import '../styles/global.scss'
 
 // Contexto //
 import { ChallengeProvider } from '../contexts/ChallengesContext'
