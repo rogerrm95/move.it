@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 
 // CSS //
-import styles from '../styles/components/ChallengeBox.module.css'
+import styles from '../styles/components/ChallengeBox.module.scss'
 
 export function ChallengeBox() {
 

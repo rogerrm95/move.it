@@ -10,7 +10,7 @@ import { LevelUpModal } from '../components/LevelUpModal';
 import { Perfil } from '../components/Perfil';
 
 // CSS //
-import styles from '../styles/pages/Home.module.css'
+import styles from '../styles/pages/Home.module.scss'
 
 export default function Home() {
   return (
