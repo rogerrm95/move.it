@@ -11,7 +11,7 @@ export function LevelUpModal() {
     const [isModalOpen, setIsModalOpen] = useState<Boolean>(false)
 
     useEffect(() => {
-        setIsModalOpen(true)
+        if (level !== 1) setIsModalOpen(true)
     }, [level])
 
     function closeModal() {

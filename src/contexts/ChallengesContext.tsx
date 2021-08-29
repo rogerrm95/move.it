@@ -57,10 +57,11 @@ export function ChallengeProvider({ children }: ChallengeProviderProps) {
 
     function gainExperience(xp: number){
         const newExperience = currentExperience + xp
+        const experienceToNextLevelOld = experienceToNextLevel
 
         if(newExperience >= experienceToNextLevel) {
             levelUp()
-            setCurrentExperience(newExperience - currentExperience)
+            setCurrentExperience(newExperience - experienceToNextLevelOld)
         } else {
             setCurrentExperience(newExperience)
         }
