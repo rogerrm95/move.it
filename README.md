@@ -43,6 +43,13 @@ os resultados finais foram os mesmo da aplicação original.
 
 Link para o projeto online: [Move.It](https://move-it-1bgv190q9-rogerrm95.vercel.app/).
 
+# 🚧 Versão 2.0 (Em desenvolvimento)
+- [ ] - Integração com Banco de Dados;
+- [ ] - Sistema de Login;
+- [ ] - Ranking;
+- [ ] - Tema Dark;
+- [ ] - Compartilhar com Redes Sociais;
+
 # 🔖 Layout
 Você pode visualizar o layout do projeto através do link abaixo:
 - [Layout Web](https://www.figma.com/file/zz9EgnPu6dWDer2raFSJYI/Move.it-1.0?node-id=160%3A2761). (Lembrando que você precisa ter uma conta no Figma).
