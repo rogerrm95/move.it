@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { ChallengesContext } from '../contexts/ChallengesContext'
 
 // CSS - module.css //
-import styles from '../styles/components/Perfil.module.css'
+import styles from '../styles/components/Perfil.module.scss'
 
 export function Perfil() {
 
@@ -19,7 +19,7 @@ export function Perfil() {
                 </strong>
 
                 <p>
-                    <img src='icons/level.svg' alt='Level' />
+                    <img src='/icons/level.svg' alt='Level'/>
                     Level {level}
                 </p>
             </div>

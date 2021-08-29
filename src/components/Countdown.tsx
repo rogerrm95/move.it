@@ -3,7 +3,7 @@ import { FaPlay, FaTimes, FaCheckCircle } from 'react-icons/fa'
 import { ChallengesContext } from '../contexts/ChallengesContext'
 
 // CSS //
-import styles from '../styles/components/Countdown.module.css'
+import styles from '../styles/components/Countdown.module.scss'
 
 let countdownTimeout: NodeJS.Timeout
 
