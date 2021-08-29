@@ -1,5 +1,4 @@
-import { FormEvent, FormEventHandler, useState } from 'react'
-import { useContext, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import { useChallenges } from '../hooks/useChallenges' // Hook //

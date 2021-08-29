@@ -1,12 +1,11 @@
-import { useContext, useEffect } from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
+import { useChallenges } from '../hooks/useChallenges';
 
 // CSS //
 import styles from '../styles/components/ChallengeBox.module.scss'
 
 export function ChallengeBox() {
 
-    const { activeChallenge, gainExperience, resetChallenge } = useContext(ChallengesContext)
+    const { activeChallenge, gainExperience, resetChallenge } = useChallenges()
 
     return (
         <div className={styles.challengeBoxContainer}>

@@ -15,12 +15,11 @@ import styles from '../styles/pages/Home.module.scss'
 export default function Home() {
   return (
     <div className={styles.container}>
-
-      <LevelUpModal/>
-
       <Head>
         <title>Início | Move.It</title>
       </Head>
+
+      <LevelUpModal/>
 
       <ExperienceBar />
 
