@@ -36,7 +36,12 @@
 body{
 
     background: var(--background);
-    color: var(--text)
+    color: var(--text);
+}
+
+#__next {
+    height: 100vh;
+    overflow: hidden;
 }
 
 button, input, textarea, body{
