@@ -41,7 +41,7 @@ Tudo para incentivar o você a descansar seu corpo a fim de evitar problemas de 
 Este é um projeto desenvolvido durante a metade do NLW#04 - Rocketseat | 2021 e a outra metade desenvolvida a parte, apenas seguindo o Layout da aplicação no Figma. Porém,
 os resultados finais foram os mesmo da aplicação original.
 
-Link para o projeto online: [Move.It](https://move-it-1bgv190q9-rogerrm95.vercel.app/).
+Link para o projeto online: [Move.It](https://move-it-l8kty98ey-rogerrm95.vercel.app/).
 
 # 🚧 Versão 2.0 (Em desenvolvimento)
 - [ ] - Integração com Banco de Dados;
