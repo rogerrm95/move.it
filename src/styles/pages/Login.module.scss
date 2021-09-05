@@ -1,0 +1,107 @@
+.container {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    aside, section {
+        height: 100%;
+        padding: 1rem 2rem;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.asideBox {
+    flex: 8;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    background: linear-gradient(180deg, #D5DEF0 0%, #C7D0EC 51.56%, #CDD1FB 100%);
+
+    img {
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    span {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+    }
+}
+
+.loginBox {
+    flex: 5;
+
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    background-color: var(--white);
+
+    h1 {
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        font-family: Roboto, sans-serif;
+        color: var(--title);
+    }
+}
+
+.buttonGroup {
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    span {
+        align-self: baseline;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;     
+        height: 3.5rem;
+        padding: 0.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font: 500 1rem Roboto, sans-serif;
+        color: var(--white);
+        border-radius: 8px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+        transition: filter 0.3s;
+
+        svg {
+            margin-left: 1rem;
+        }
+
+        &:first-of-type {
+            background-color: #DD4B39;
+        }
+
+        &:last-of-type {
+            background-color: #000;
+        }
+
+        &:hover {
+            filter: brightness(0.85);
+        }
+    }
+}
