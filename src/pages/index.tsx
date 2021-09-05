@@ -1,41 +1,41 @@
 // NEXT //
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-// Componentes //
-import { CompletedChallenges } from '../components/CompletedChallenges';
-import { Countdown } from '../components/Countdown';
-import { ChallengeBox } from '../components/ChallengeBox';
-import { ExperienceBar } from "../components/ExperienceBar";
-import { LevelUpModal } from '../components/LevelUpModal';
-import { Perfil } from '../components/Perfil';
+import { FiLogIn } from 'react-icons/fi'
+import styles from './../styles/pages/LandingPage.module.scss'
 
-// CSS //
-import styles from '../styles/pages/Home.module.scss'
+export default function LandingPage() {
+  const { push } = useRouter()
 
-export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Início | Move.It</title>
       </Head>
 
-      <LevelUpModal/>
+      <main className={styles.main}>
+        <section className={styles.description}>
+          <img src="./logo-full.svg" alt="Logo" />
 
-      <ExperienceBar />
+          <h1>
+            O lugar ideal para você, <br />
+            exercitar seu corpo enquanto trabalha.
+          </h1>
 
-      <section>
-        <div>
-          <Perfil />
+          <p>
+            Venha participar de nosso jogo.<br />
+            Basta clicar no botão abaixo para conhecer nossa plataforma.
+          </p>
 
-          <CompletedChallenges />
+          <button className={styles.beginButton} onClick={() => push('/login')}>
+            Entrar
+            <FiLogIn size={24} color='#FFF' />
+          </button>
+        </section>
 
-          <Countdown />
-        </div>
-
-        <div>
-          <ChallengeBox />
-        </div>
-      </section>
+        <img src="./assets/hero-image.svg" alt="Pessoas Exercitando" />
+      </main>
     </div>
   )
 }

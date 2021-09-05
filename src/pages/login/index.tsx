@@ -1,17 +1,22 @@
+import Head  from 'next/head'
 import { FiLogIn } from 'react-icons/fi'
 import styles from './../../styles/pages/Login.module.scss'
 
-export default function LandingPage() {
+export default function Login() {
     return (
         <main className={styles.container}>
+            <Head>
+                <title>Login | Move.It</title>
+            </Head>
+
             <aside className={styles.asideBox}>
                 <img src="./assets/hero-login-image.svg" alt="Mulher alongando" />
                 <h1>
-                    Do conforto de sua casa <br/>
+                    Do conforto de sua casa <br />
                     ou trabalho.
                 </h1>
                 <span>
-                    Pratique inúmeros exercícios <br/>
+                    Pratique inúmeros exercícios <br />
                     físicos e mantenha-se saudável.
                 </span>
             </aside>
@@ -25,11 +30,11 @@ export default function LandingPage() {
                     <span>Selecione uma conta</span>
                     <button>
                         Entrar com Google
-                        <FiLogIn size={24} color='#FFF'/>
+                        <FiLogIn size={24} color='#FFF' />
                     </button>
                     <button>
                         Entrar com Github
-                        <FiLogIn size={24} color='#FFF'/>
+                        <FiLogIn size={24} color='#FFF' />
                     </button>
                 </div>
             </section>
