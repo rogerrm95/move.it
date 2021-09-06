@@ -8,7 +8,8 @@
     justify-content: center;
     margin: auto;
 
-    aside, section {
+    aside,
+    section {
         height: 100%;
         padding: 1rem 2rem;
 
@@ -21,12 +22,12 @@
 
 .asideBox {
     flex: 8;
-    display:  flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
 
-    background: linear-gradient(180deg, #D5DEF0 0%, #C7D0EC 51.56%, #CDD1FB 100%);
+    background: linear-gradient(180deg, #d5def0 0%, #c7d0ec 51.56%, #cdd1fb 100%);
 
     img {
         align-self: center;
@@ -42,21 +43,30 @@
 
 .loginBox {
     flex: 5;
-
-    display:  flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    place-items: center;
 
     background-color: var(--white);
 
-    h1 {
-        margin-bottom: 1rem;
-        margin-top: 2rem;
-        font-family: Roboto, sans-serif;
-        color: var(--title);
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+            font-family: Roboto, sans-serif;
+            color: var(--title);
+        }
     }
+}
+
+.logo {
+    margin-top: 2rem;
+    width: 10rem;  
 }
 
 .buttonGroup {
@@ -74,7 +84,7 @@
     }
 
     button {
-        width: 100%;     
+        width: 100%;
         height: 3.5rem;
         padding: 0.5rem;
 
@@ -93,7 +103,7 @@
         }
 
         &:first-of-type {
-            background-color: #DD4B39;
+            background-color: #dd4b39;
         }
 
         &:last-of-type {
