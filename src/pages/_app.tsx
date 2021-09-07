@@ -1,13 +1,17 @@
-import '../styles/global.scss'
-
+import { AppProps } from 'next/app'
 // Contexto //
+import { Provider as NextAuthProvider } from 'next-auth/client'
 import { ChallengeProvider } from '../contexts/ChallengesContext'
 
-function MyApp({ Component, pageProps }) {
+import '../styles/global.scss'
+
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChallengeProvider>
-      <Component {...pageProps} />
-    </ChallengeProvider>
+    <NextAuthProvider session={pageProps.session}>
+      <ChallengeProvider>
+        <Component {...pageProps} />
+      </ChallengeProvider>
+    </NextAuthProvider>
   )
 }
 
